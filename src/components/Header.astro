@@ -1,8 +1,12 @@
 ---
+import Logo from '../components/Logo.astro';
 
 ---
 
 <nav>
+  <span class="logo-wrapper">
+    <Logo />
+  </span>
   <ul>
     <li>
       <a href="#contact">Contact</a>
@@ -15,9 +19,14 @@
 <style>
   nav {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: center;
     height: 100%;
     align-items: center;
+  }
+  .logo-wrapper {
+    margin: auto;
+    transform: translateX(50%);
   }
   nav ul {
     list-style: none;
